@@ -1,0 +1,25 @@
+.header {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding-top: 30px;
+
+  @media (min-width: 1200px) {
+    background-image: url(../img/header-line.jpg);
+    background-position: center;
+  }
+}
+
+header.active {
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

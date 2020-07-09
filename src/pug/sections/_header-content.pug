@@ -1,0 +1,32 @@
+.container.relative
+    .header__info
+        .info__photo
+            img(src="./img/my-photo.jpg", alt="my_photo")
+        .info__about-me
+            .about-me__article
+                h1.name
+                    span.underscore Little  
+                    br 
+                    span.underscore Kaoy
+                p Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ.
+            .info__buttons
+                a(href="").button__get-to-know Познакомиться
+
+                a(href="").button__contscts Контакты
+.header-bg
+    img(src="img/header-bg.png", alt="bg")
+.container
+    .header_services
+        .services_skills
+            h3.services-title Что я умею:
+            ul.skills__list
+                li.skills__list-item Pixel perfect, полное соответствие макету.
+                li.skills__list-item Верстаю с сеткой или без.
+                li.skills__list-item Адаптивная верстка под мобильные устройства.
+                li.skills__list-item Оптимизация под retina экраны.
+                li.skills__list-item С Bootstrap и без него.
+            a(href="#").skills__button Смотреть работы
+        .services_social
+            h3.services-title На связи:
+            include ./_social.pug
+            a(href="mailto:howkiens@gmail.com").services__mail howkiens@gmail.com

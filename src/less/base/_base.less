@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: @MPlus;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+p,
+label {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  padding: 0;
+}
+
+textarea,
+button,
+input {
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
+.none {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  @media (min-width: 576px) {
+    min-width: 540px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @media (min-width: 768px) {
+    min-width: 720px;
+  }
+  @media (min-width: 992px) {
+    min-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    min-width: 1140px;
+  }
+}
+
+.underscore {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute; 
+    left: -5px;
+    right: -5px;
+    height: 10px;
+    background-color: @yellow;
+    z-index: -1;
+  }
+}
+
+*:focus {
+  outline: dotted @pink;
+}
+
+*::selection {
+  background-color: @yellow;
+}
