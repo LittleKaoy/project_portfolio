@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: @MPlus;
+  font-family: @Montserrat;
 }
 
 a {
@@ -95,10 +95,31 @@ input {
   }
 }
 
-*:focus {
-  outline: dotted @pink;
-}
-
 *::selection {
   background-color: @yellow;
 }
+
+body {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: z-index 1s step-end, background-color 1s;
+  } 
+}
+
+body.active {
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(44, 52, 73, 0.75);
+    transition: z-index 1s step-start, background-color 1s;
+  }
+}
+

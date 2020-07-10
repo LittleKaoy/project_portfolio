@@ -1,7 +1,6 @@
 .navigation
     a(href="#").navigation__logo
         span.underscore LK
-    //- .navigation__menu
     nav.navigation__nav
         a(href="#").navigation__nav-item Главная
         a(href="#").navigation__nav-item Работы
@@ -10,6 +9,18 @@
         a(href="#").navigation__social-item.navigation__social-item--linkedin <i class="fab fa-linkedin-in"></i>
         a(href="#").navigation__social-item.navigation__social-item--github <i class="fab fa-github"></i>
         a(href="#").navigation__social-item.navigation__social-item--vk <i class="fab fa-vk"></i>
+    .navigation__menu
+        a(href="#").navigation__logo
+            span.underscore LK
+        ul.menu-list
+            li.menu-list__item 
+                a(href="#") Услуги 
+            li.menu-list__item  
+                a(href="#") Работы           
+            li.menu-list__item    
+                a(href="#") Контакты
+        include ./_social.pug
+        a(href="mailto:howkiens@gmail.com").services__mail howkiens@gmail.com
     .toggle-menu
             span
             
