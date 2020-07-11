@@ -17,6 +17,7 @@
   }
 
   @media (min-width: 1430px) {
+    margin-bottom: 100px;
     padding-right: 0;
     padding-left: 0;
   }
@@ -25,8 +26,17 @@
 .navigation__logo {
   font-weight: 900;
   font-size: 42px;
+
+  &:hover {
+    span::before {
+      border-radius: 40px 10px;
+      height: 36px;
+      transition: 1s;
+    }
+  }
   span::before {
-    bottom: 10px;
+    transition: 1s;
+    bottom: 8px;
   }
 }
 
@@ -155,7 +165,7 @@
 }
 .navigation__menu .social {
   margin-bottom: 40px;
-  @media (min-width: 768px) {
+  @media (min-width: 576px) {
     justify-content: space-between;
     .social-item {
       margin-right: 0;
@@ -181,8 +191,6 @@
   @media (min-width: 1200px) {
     display: none;
   }
-
-
 }
 
 .toggle-menu span {
@@ -214,7 +222,6 @@
 }
 
 .toggle-menu.active span {
-
   background-color: inherit;
   &::after {
     transform: rotate(45deg);

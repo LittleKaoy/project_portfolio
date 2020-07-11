@@ -81,12 +81,21 @@ input {
   }
 }
 
+.button {
+  display: block;
+  height: 65px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 50px;
+  line-height: 65px;
+}
+
 .underscore {
   position: relative;
   z-index: 1;
   &::before {
     content: "";
-    position: absolute; 
+    position: absolute;
     left: -5px;
     right: -5px;
     height: 10px;
@@ -109,7 +118,7 @@ body {
     right: 0;
     bottom: 0;
     transition: z-index 1s step-end, background-color 1s;
-  } 
+  }
 }
 
 body.active {
@@ -122,4 +131,3 @@ body.active {
     transition: z-index 1s step-start, background-color 1s;
   }
 }
-
