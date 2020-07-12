@@ -1,0 +1,16 @@
+.portfolio(id="portfolio")
+    .container    
+        .main-heading 
+            span.underscore Портфолио
+        .sort-list
+            button.sort-item.active Все работы
+            button.sort-item Bootstrap
+            button.sort-item WordPress
+            button.sort-item Frontend
+        .projects
+            +project-card("#", "project-1.jpeg", "project-1", "Верстка “Форест тревел”", "Верстка многостраничного сайта.")
+            +project-card("#", "project-2.jpeg", "project-2", "Сайт для коворкинга “UNIT”", "Верстка лендинга.")
+            +project-card("#", "project-example.jpg", "project-3", "Верстка “Example”", "Example bootstrap.")
+            +project-card("#", "project-example.jpg", "project-4", "Верстка “Example”", "Example wordpress.")
+            +project-card("#", "project-example.jpg", "project-5", "Верстка “Example”", "Example frontend.")
+        a(href="#").projects-all Смотреть все работы

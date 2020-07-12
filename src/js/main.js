@@ -17,4 +17,15 @@ $(document).ready(function () {
     $(".toggle-menu").removeClass("active");
     $(".navigation__menu").removeClass("active");
   });
+
+  $(".project-card").hover(
+    function () {
+      $(this).find($(".project-card__hover")).addClass("active");
+      $(this).find($(".project-card__title")).addClass("active");
+    },
+    function () {
+      $(this).find($(".project-card__hover")).removeClass("active");
+      $(this).find($(".project-card__title")).removeClass("active");
+    }
+  );
 });

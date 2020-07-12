@@ -1,0 +1,256 @@
+.portfolio {
+  background-color: #f4f8f9;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  @media (min-width: 768px) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.portfolio .main-heading {
+  margin-bottom: 50px;
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 75px;
+  }
+}
+
+.sort-list {
+  display: none;
+  margin-bottom: 55px;
+  @media (min-width: 768px) {
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+  }
+}
+
+.sort-item {
+  background-color: inherit;
+  font-weight: 800;
+  color: #8fa5ae;
+  @media (min-width: 768px) {
+    font-size: 24px;
+    margin-right: 50px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 28px;
+    margin-right: 80px;
+  }
+
+  &:active,
+  &:hover {
+    color: @pink;
+  }
+}
+
+.sort-item.active {
+  color: #000;
+}
+
+.projects {
+  margin-bottom: 50px;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.project-card {
+  display: block;
+  max-width: 500px;
+  margin-bottom: 45px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:nth-child(N + 6) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    max-width: none;
+    width: ~"calc(50% - 16px)";
+    &:nth-child(N + 5) {
+      display: none;
+    }
+    &:nth-child(N + 3) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &:nth-child(N + 5) {
+      display: block;
+    }
+    &:nth-child(N + 3) {
+      margin-bottom: 45px;
+      max-width: ~"calc(33% - 20px)";
+      .project-card__title {
+        font-size: 24px;
+      }
+      .project-card__subtitle {
+        font-size: 20px;
+      }
+    }
+    &:nth-last-child(-N + 3) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.project-card__preview {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
+}
+
+.project-card__hover {
+  @media (min-width: 1200px) {
+    transform: translateY(-100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(251, 220, 77, 0.85);
+    transition: 1s;
+  }
+}
+
+.project-card__hover.active {
+  transform: translateY(0);
+}
+
+.see-more {
+  display: none;
+  @media (min-width: 1200px) {
+    display: inline-block;
+    position: absolute;
+    width: 265px;
+    padding: 0;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    background-color: #fff;
+    color: @pink;
+    font-size: 22px;
+    font-weight: 700;
+
+    transition: 0.5s;
+    &:hover {
+      color: #fff;
+      background-color: @pink;
+      transition: 1s;
+    }
+    &:active {
+      color: #fff;
+      background-color: #d4423b;
+    }
+  }
+}
+
+.project-card__title {
+  display: inline-block;
+  position: relative;
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 15px;
+  transition: background-color 2s, color 2s;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 32px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: @pink;
+    transition: 1s;
+  }
+  &:hover {
+    color: @pink;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.project-card__title.active {
+  transition: 1s;
+  color: @pink;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: @pink;
+    transition: 1s;
+  }
+}
+
+.project-card__subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 22px;
+  }
+}
+
+.projects-all {
+  position: relative;
+  font-size: 20px;
+  color: #45b5eb;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #45b5eb;
+  }
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}

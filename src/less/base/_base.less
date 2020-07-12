@@ -104,6 +104,27 @@ input {
   }
 }
 
+.main-heading {
+  font-weight: 800;
+  font-size: 42px;
+  .underscore::before {
+    bottom: 7px;
+  }
+  @media (min-width: 768px) {
+    font-size: 52px;
+    .underscore::before {
+      bottom: 10px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 64px;
+    .underscore::before {
+      bottom: 12px;
+    }
+  }
+}
+
 *::selection {
   background-color: @yellow;
 }
