@@ -28,4 +28,13 @@ $(document).ready(function () {
       $(this).find($(".project-card__title")).removeClass("active");
     }
   );
+
+  $(".work-plan__task").hover(
+    function () {
+      $(this).find($(".task__article-title")).addClass("active");
+    },
+    function () {
+      $(this).find($(".task__article-title")).removeClass("active");
+    }
+  );
 });

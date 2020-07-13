@@ -1,6 +1,7 @@
 .header__info {
   position: relative;
   z-index: 1;
+  margin-bottom: 30px;
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row-reverse;
@@ -19,7 +20,7 @@
 .info__photo {
   position: relative;
   max-width: 400px;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   margin-right: auto;
   margin-left: auto;
   @media (min-width: 768px) {
@@ -52,11 +53,12 @@
 .info__about-me {
   p {
     max-width: 480px;
-    line-height: 1.5;
+    line-height: 1.7;
     font-size: 18px;
     font-weight: 500;
   }
 }
+
 .about-me__article {
   margin-bottom: 25px;
   @media (min-width: 768px) {
@@ -71,19 +73,19 @@
   font-size: 42px;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 25px;
-  .underscore::before {
+  margin-bottom: 30px;
+  .underscore::after {
     bottom: 7px;
   }
   @media (min-width: 768px) {
     font-size: 52px;
-    .underscore::before {
+    .underscore::after {
       bottom: 10px;
     }
   }
   @media (min-width: 1200px) {
     font-size: 82px;
-    .underscore::before {
+    .underscore::after {
       bottom: 17px;
     }
   }
@@ -125,7 +127,7 @@
 }
 
 .header-bg {
-  margin-bottom: 50px;
+  margin-bottom: 80px;
   position: relative;
   transform: scale(1.8);
 
@@ -136,7 +138,8 @@
     transform: scale(1.2);
   }
   @media (min-width: 768px) {
-    margin-bottom: 0;
+    margin-top: -70px;
+    margin-bottom: 10px;
     transform: scale(1);
   }
   @media (min-width: 1200px) {
@@ -155,7 +158,9 @@
 }
 
 .services_skills {
-  margin-bottom: 45px;
+  padding-top: 50px;
+  margin-top: -50px;
+  margin-bottom: 35px;
   @media (min-width: 768px) {
     margin-bottom: 0;
   }
@@ -174,7 +179,7 @@
 }
 
 .services_skills .services-title {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   @media (min-width: 768px) {
     margin-bottom: 30px;
   }

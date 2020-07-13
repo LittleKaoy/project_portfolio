@@ -1,0 +1,10 @@
+mixin work-task(imgsrc, title, info, time)
+
+    .work-plan__task
+        .task__preview
+            img(src="img/svg/" + imgsrc, alt="svg")
+        .task__article
+            .task__article-title
+                span.underscore=title
+            .task__artiicle-info=info
+            .task__article-time=time

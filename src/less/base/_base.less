@@ -93,7 +93,7 @@ input {
 .underscore {
   position: relative;
   z-index: 1;
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     left: -5px;
@@ -101,25 +101,26 @@ input {
     height: 10px;
     background-color: @yellow;
     z-index: -1;
+    transition:background-color 0.5s ;
   }
 }
 
 .main-heading {
   font-weight: 800;
   font-size: 42px;
-  .underscore::before {
+  .underscore::after {
     bottom: 7px;
   }
   @media (min-width: 768px) {
     font-size: 52px;
-    .underscore::before {
+    .underscore::after {
       bottom: 10px;
     }
   }
 
   @media (min-width: 1200px) {
     font-size: 64px;
-    .underscore::before {
+    .underscore::after {
       bottom: 12px;
     }
   }
