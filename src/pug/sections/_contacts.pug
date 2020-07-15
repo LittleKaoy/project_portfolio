@@ -1,0 +1,32 @@
+.contacts
+    .container
+        .main-heading
+            span.underscore Контакты
+        .contacts__content
+            .content__info
+                .info__spec Если вы ищите специалиста по верстке сайтов, front-end разработчика в команду или для работы над проектом &mdash; напишите мне.
+                .info__connect
+                    .info__connect__select
+                        .connect-type Email
+                        a(href="mailto:howkiens@gmail.com").connect-address.link howkiens@gmail.com
+                    .info__connect__select
+                        .connect-type Skype
+                        a(href="skype:loveswow5").connect-address.link none
+                    .info__connect__select
+                        .connect-type Телефон
+                        a(href="tel:+71234567890").connect-address +7 (123) 4567890
+                    .info__connect__select
+                        .connect-type Адрес
+                        a(href="#").connect-address Россия, Москва 
+                include _social.pug
+            .content__inputs
+                .input-area
+                    input(type="email").content-input
+                    span.fake-placeholder Ваш Email
+                .input-area
+                    input(type="text").content-input
+                    span.fake-placeholder Тема письма
+                .input-area
+                    textarea(type="text" rows="6").content-input.message
+                    span.fake-placeholder Сообщение
+                button.button.contacts-button Отправить

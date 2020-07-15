@@ -37,4 +37,23 @@ $(document).ready(function () {
       $(this).find($(".task__article-title")).removeClass("active");
     }
   );
+
+  const inputArea = document.querySelectorAll(".input-area");
+  const contentInput = document.querySelectorAll(".content-input");
+
+  for (let i = 0; i < inputArea.length; i++) {
+    inputArea[i].addEventListener("click", function () {
+      const placeholderElement = this.querySelector(".fake-placeholder");
+      placeholderElement.classList.add("active");
+    });
+  }
+
+  for (let i = 0; i < contentInput.length; i++) {
+    contentInput[i].addEventListener("blur", function () {
+      const thisParent = this.parentElement;
+      if (this.value == "") {
+        thisParent.querySelector("span").classList.remove("active");
+      }
+    });
+  }
 });
