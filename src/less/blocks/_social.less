@@ -1,10 +1,8 @@
 .social {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  @media (min-width: 576px) {
-    justify-content: start;
-  }
+  // justify-content: space-between;
+
 }
 
 .social-item {
@@ -13,20 +11,16 @@
   font-size: 50px;
   line-height: 1;
   transition: 0.5s;
-  // width: 50px;
-  // height: 50px;
+  margin-right: 25px;
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover{
     transform: scale(1.1);
     transition: 0.7s;
   }
 
-  @media (min-width: 576px) {
-    margin-right: 25px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 }
 
 .social-item--vk,
