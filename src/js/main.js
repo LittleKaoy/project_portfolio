@@ -56,4 +56,50 @@ $(document).ready(function () {
       }
     });
   }
+
+  $("#contacts-form").validate({
+    rules: {
+      email: {
+        required: true,
+        email: true,
+      },
+      theme: {
+        required: true,
+      },
+      message: {
+        required: true,
+      },
+    },
+    messages: {
+      email: {
+        required: "Пожалуйста введите email.",
+        email: "Email должен содержать @",
+      },
+      theme: {
+        required: "Введите тему сообщения",
+      },
+      message: {
+        required: "Введите текст сообщения",
+      },
+    },
+    submitHandler: function (form) {
+      ajaxFormSubmit();
+    },
+  });
+
+  function ajaxFormSubmit() {
+    let string = $("#contacts-form").serialize();
+
+    $.ajax({
+      type: "POST",
+      url: "php/mail.php",
+      data: string,
+
+      success: function (html) {
+        $("#contacts-form").slideUp(800);
+        $("#answer").html(html);
+      },
+    });
+    return false;
+  }
 });

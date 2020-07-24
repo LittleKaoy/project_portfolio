@@ -14,19 +14,20 @@
                     //-     a(href="skype:loveswow5").connect-address.link none
                     .info__connect__select
                         .connect-type Телефон
-                        a(href="tel:+71234567890").connect-address +7 (123) 4567890
+                        a(href="tel:+79877150479").connect-address +7 (987) 7150479
                     .info__connect__select
                         .connect-type Адрес
                         a(href="#").connect-address Россия, Москва 
                 include _social.pug
-            .content__inputs
+            form(action="" id="contacts-form").content__inputs
                 .input-area
-                    input(type="email").content-input
+                    input(type="email" name="email").content-input
                     span.fake-placeholder Ваш Email
                 .input-area
-                    input(type="text").content-input
+                    input(type="text" name="theme").content-input
                     span.fake-placeholder Тема письма
                 .input-area
-                    textarea(type="text" rows="6").content-input.message
+                    textarea(type="text" rows="6" name="message").content-input.message
                     span.fake-placeholder Сообщение
-                button.button.contacts-button Отправить
+                input(type="submit" value="Отправить").button.contacts-button
+            div(id="answer")
